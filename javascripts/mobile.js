@@ -6202,7 +6202,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     Monster.prototype.getSkinString = function() {
       return this.getIndexString(["坚硬", "常规", "柔软", "极软", "极硬"], "skin");
     };
-  
+
   Monster.prototype.getSklmaxString = function() {
       var value;
       value = this.get("sklmax");
@@ -6308,15 +6308,15 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push(_.renderTemplate("templates/mobile/mirror_info"));
-      
+
         __out.push('\n\n<view class="main">\n  ');
-      
+
         __out.push(_.renderTemplate("templates/mobile/sidebar"));
-      
+
         __out.push('\n\n  <container class="content container"></container>\n</view>\n\n<modal class="modal"></modal>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6362,13 +6362,13 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         if (!(location.href.indexOf("oschina") >= 0 || location.href.indexOf("merusuto") >= 0 || (typeof localStorage !== "undefined" && localStorage !== null ? localStorage["mirror-info-disabled"] : void 0))) {
-          __out.push('\n  <div class="alert alert-dismissible fade in" id="mirror-alert">\n    <button type="button" class="close" data-dismiss="alert" id="mirror-dismiss-button"><span>×</span></button>\n    <h4>梅露可图鉴 国内镜像</h4>\n    <p>为保证服务质量，梅露可图鉴在国内服务器上部属了一份镜像网站，国内用户访问更快更稳定，避免网站偶尔由于不可抗力访问不到！</p>\n    <p>\n      <a href="http://rhym997.oschina.io/merusuto/mobile/" class="btn btn-primary">访问国内镜像</a>\n      <button type="button" class="btn" id="mirror-disable-button">不再显示这条消息</button>\n    </p>\n  </div>\n\n  <script type="text/javascript">\n    $("#mirror-disable-button").click(function() {\n      $("#mirror-alert").hide();\n      if (_.isObject(localStorage)) {\n        localStorage["mirror-info-disabled"] = true\n      }\n    })\n    $("#mirror-dismiss-button").click(function() {\n      $("#mirror-alert").hide();\n    })\n  </script>\n');
+          __out.push('\n  <div class="alert alert-dismissible fade in" id="mirror-alert">\n    <button type="button" class="close" data-dismiss="alert" id="mirror-dismiss-button"><span>×</span></button>\n    <h4>梅露可图鉴 国内镜像</h4>\n    <p>为保证服务质量，梅露可图鉴在国内服务器上部属了一份镜像网站，国内用户访问更快更稳定，避免网站偶尔由于不可抗力访问不到！</p>\n    <p>\n      <a href="http://merusuto.oschina.io/mobile/" class="btn btn-primary">访问国内镜像</a>\n      <button type="button" class="btn" id="mirror-disable-button">不再显示这条消息</button>\n    </p>\n  </div>\n\n  <script type="text/javascript">\n    $("#mirror-disable-button").click(function() {\n      $("#mirror-alert").hide();\n      if (_.isObject(localStorage)) {\n        localStorage["mirror-info-disabled"] = true\n      }\n    })\n    $("#mirror-dismiss-button").click(function() {\n      $("#mirror-alert").hide();\n    })\n  </script>\n');
         }
-      
+
         __out.push('\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6414,27 +6414,27 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push('<div id="disqus_thread"></div>\n<script type="text/javascript">\n  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */\n  var disqus_shortname = \'merusuto\';\n  var disqus_identifier = \'');
-      
+
         __out.push(__sanitize(this.model.klass));
-      
+
         __out.push(__sanitize(this.model.id));
-      
+
         __out.push('\';\n  var disqus_title = \'');
-      
+
         __out.push(__sanitize(this.model.getTitleString()));
-      
+
         __out.push('\';\n  var disqus_url = \'');
-      
+
         __out.push(__sanitize(window.location.href.replace("#", "#!")));
-      
+
         __out.push('/');
-      
+
         __out.push(__sanitize(this.model.id));
-      
+
         __out.push('\';\n  var disqus_config = function () {\n    this.language = "zh";\n  };\n\n  if (typeof DISQUS === "undefined") {\n    /* * * DON\'T EDIT BELOW THIS LINE * * */\n    (function() {\n      var dsq = document.createElement(\'script\');\n      dsq.type = \'text/javascript\'; dsq.async = true;\n      dsq.src = \'http://\' + disqus_shortname + \'.disqus.com/embed.js\';\n      (document.getElementsByTagName(\'head\')[0] || document.getElementsByTagName(\'body\')[0]).appendChild(dsq);\n    })();\n  } else {\n    DISQUS.reset({\n      reload: true,\n      config: function () {\n        this.page.identifier = disqus_identifier;\n        this.page.title = disqus_title;\n        this.page.url = disqus_url;\n        this.language = "zh";\n      }\n    });\n  }\n</script>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6480,9 +6480,9 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push('<a class="icon icon-close pull-right" sref="#close-modal"></a>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6528,95 +6528,95 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push(_.renderTemplate("templates/mobile/modals/header"));
-      
+
         __out.push('\n<div class="content">\n  <div class="slider">\n    <div class="slide-group">\n      <div class="slide">\n        <img class="image" src="');
-      
+
         __out.push(__sanitize(this.model.originalUrl()));
-      
+
         __out.push('">\n      </div>\n      <div class="slide media">\n        <div class="media-body">\n          <h4 class="media-title media-info-group">\n            ');
-      
+
         __out.push(__sanitize(this.model.getTitleString()));
-      
+
         __out.push('\n            <small>');
-      
+
         __out.push(__sanitize(this.model.getRareString()));
-      
+
         __out.push('</small>\n            <br>\n            <small>ID: ');
-      
+
         __out.push(__sanitize(this.model.get("id")));
-      
+
         __out.push('</small>\n          </h4>\n          <div class="media-info-group">\n            <p class="media-info">\n              攻距：');
-      
+
         __out.push(__sanitize(this.model.getString("aarea")));
-      
+
         __out.push('<br>\n              韧性：');
-      
+
         __out.push(__sanitize(this.model.getString("tenacity")));
-      
+
         __out.push('<br>\n              移速：');
-      
+
         __out.push(__sanitize(this.model.getString("mspd")));
-      
+
         __out.push('<br>\n              溅射距离：');
-      
+
         __out.push(__sanitize(this.model.getString("sarea")));
-      
+
         __out.push('<br>\n            </p>\n            <p class="media-info">\n              攻数：');
-      
+
         __out.push(__sanitize(this.model.getString("anum")));
-      
+
         __out.push('<br>\n              多段：');
-      
+
         __out.push(__sanitize(this.model.getString("hits")));
-      
+
         __out.push('<br>\n              皮肤：');
-      
+
         __out.push(__sanitize(this.model.getSkinString()));
-      
+
         __out.push('<br>\n              攻速：');
-      
+
         __out.push(__sanitize(this.model.getString("aspd")));
-      
+
         __out.push('<br>\n            </p>\n          </div>\n                   <div class="media-info-title">技能</div>\n          <p class="media-info">\n            ');
-      
+
         __out.push(__sanitize(this.model.getString("skill")));
-      
+
         __out.push('<br><br>\n            技能消耗：');
-      
+
         __out.push(__sanitize(this.model.getString("sklsp")));
-      
+
         __out.push('<br>\n            技能CD：');
-      
+
         __out.push(__sanitize(this.model.getString("sklcd")));
-      
+
         __out.push('<br>\n          </p>\n          <div class="media-info-title">获取方式</div>\n          <p class="media-info">\n            ');
-      
+
         __out.push(__sanitize(this.model.getString('obtain')));
-      
+
         __out.push('\n          </p>\n\n          ');
-      
+
         if (this.model.get('remark')) {
           __out.push('\n            <div class="media-info-title">简介</div>\n            <p class="media-info">\n              ');
           __out.push(__sanitize(this.model.get("remark")));
           __out.push('\n            </p>\n          ');
         }
-      
+
         __out.push('\n\n          ');
-      
+
         if (this.model.get('contributors')) {
           __out.push('\n            <div class="media-info-title">数据提供者</div>\n            <p class="media-info">\n              ');
           __out.push(__sanitize(this.model.get('contributors').join("、")));
           __out.push('\n            </p>\n          ');
         }
-      
+
         __out.push('\n\n          <a class="media-info" href="../desktop/#monsters/');
-      
+
         __out.push(__sanitize(this.model.id));
-      
+
         __out.push('/edit">数据有误？点击这里</a>\n        </div>\n      </div>\n    </div>\n    <div class="slide-handler">\n      <span class="icon icon-right-nav slide-next"></span>\n      <span class="icon icon-left-nav slide-prev"></span>\n    </div>\n  </div>\n</div>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6662,173 +6662,173 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push(_.renderTemplate("templates/mobile/modals/header"));
-      
+
         __out.push('\n<div class="content">\n  <div class="slider">\n    <div class="slide-group">\n      <div class="slide">\n        <img class="image" src="');
-      
+
         __out.push(__sanitize(this.model.originalUrl()));
-      
+
         __out.push('">\n      </div>\n      <div class="slide media">\n        <div class="media-body">\n          <h4 class="media-title media-info-group">\n            ');
-      
+
         __out.push(__sanitize(this.model.getTitleString()));
-      
+
         __out.push('\n            <small>');
-      
+
         __out.push(__sanitize(this.model.getRareString()));
-      
+
         __out.push('</small>\n            <br>\n            <small>ID: ');
-      
+
         __out.push(__sanitize(this.model.getString("id")));
-      
+
         __out.push('</small>\n          </h4>\n          <div class="media-info-group">\n            <p class="media-info">\n              初始生命：');
-      
+
         __out.push(__sanitize(this.model.origin.life));
-      
+
         __out.push('<br>\n              满级生命：');
-      
+
         __out.push(__sanitize(this.model.calcMaxLv('life')));
-      
+
         __out.push('<br>\n              满觉生命：');
-      
+
         __out.push(__sanitize(this.model.calcMaxLvAndGrow('life')));
-      
+
         __out.push('<br>\n              初始攻击：');
-      
+
         __out.push(__sanitize(this.model.origin.atk));
-      
+
         __out.push('<br>\n              满级攻击：');
-      
+
         __out.push(__sanitize(this.model.calcMaxLv('atk')));
-      
+
         __out.push('<br>\n              满觉攻击：');
-      
+
         __out.push(__sanitize(this.model.calcMaxLvAndGrow('atk')));
-      
+
         __out.push('<br>\n            </p>\n            <p class="media-info">\n              攻距：');
-      
+
         __out.push(__sanitize(this.model.getString("aarea")));
-      
+
         __out.push('<br>\n              攻数：');
-      
+
         __out.push(__sanitize(this.model.getString("anum")));
-      
+
         __out.push('<br>\n              攻速：');
-      
+
         __out.push(__sanitize(this.model.getString("aspd")));
-      
+
         __out.push('<br>\n              韧性：');
-      
+
         __out.push(__sanitize(this.model.getString("tenacity")));
-      
+
         __out.push('<br>\n              移速：');
-      
+
         __out.push(__sanitize(this.model.getString("mspd")));
-      
+
         __out.push('<br>\n              多段：');
-      
+
         __out.push(__sanitize(this.model.getString("hits")));
-      
+
         __out.push('<br>\n            </p>\n          </div>\n          <div class="media-info-group">\n            <p class="media-info">\n              初始DPS：');
-      
+
         __out.push(__sanitize(Math.round(this.model.origin.dps)));
-      
+
         __out.push('<br>\n              满级DPS：');
-      
+
         __out.push(__sanitize(Math.round(this.model.calcMaxLv('dps'))));
-      
+
         __out.push('<br>\n              满觉DPS：');
-      
+
         __out.push(__sanitize(Math.round(this.model.calcMaxLvAndGrowDPS())));
-      
+
         __out.push('<br>\n              初始总DPS：');
-      
+
         __out.push(__sanitize(Math.round(this.model.origin.mdps)));
-      
+
         __out.push('<br>\n              满级总DPS：');
-      
+
         __out.push(__sanitize(Math.round(this.model.calcMaxLv('mdps'))));
-      
+
         __out.push('<br>\n              满觉总DPS：');
-      
+
         __out.push(__sanitize(Math.round(this.model.calcMaxLvAndGrowMDPS())));
-      
+
         __out.push('<br>\n            </p>\n            <p class="media-info">\n              成长：');
-      
+
         __out.push(__sanitize(this.model.getTypeString()));
-      
+
         __out.push('<br>\n              火：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("fire")));
-      
+
         __out.push('<br>\n              水：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("aqua")));
-      
+
         __out.push('<br>\n              风：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("wind")));
-      
+
         __out.push('<br>\n              光：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("light")));
-      
+
         __out.push('<br>\n              暗：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("dark")));
-      
+
         __out.push('<br>\n            </p>\n          </div>\n          <div class="media-info-group">\n            <p class="media-info">\n              国家：');
-      
+
         __out.push(__sanitize(this.model.getString('country')));
-      
+
         __out.push('<br>\n              性别：');
-      
+
         __out.push(__sanitize(this.model.getGenderString()));
-      
+
         __out.push('<br>\n              年龄：');
-      
+
         __out.push(__sanitize(this.model.getString('age')));
-      
+
         __out.push('<br>\n            </p>\n            <p class="media-info">\n              职业：');
-      
+
         __out.push(__sanitize(this.model.getString('career')));
-      
+
         __out.push('<br>\n              兴趣：');
-      
+
         __out.push(__sanitize(this.model.getString('interest')));
-      
+
         __out.push('<br>\n              性格：');
-      
+
         __out.push(__sanitize(this.model.getString('nature')));
-      
+
         __out.push('<br>\n            </p>\n          </div>\n\n          <div class="media-info-title">获取方式</div>\n          <p class="media-info">\n            ');
-      
+
         __out.push(__sanitize(this.model.getString('obtain')));
-      
+
         __out.push('\n          </p>\n\n          ');
-      
+
         if (this.model.get('remark')) {
           __out.push('\n            <div class="media-info-title">备注</div>\n            <p class="media-info">\n              ');
           __out.push(__sanitize(this.model.get("remark")));
           __out.push('\n            </p>\n          ');
         }
-      
+
         __out.push('\n\n          ');
-      
+
         if (this.model.get('contributors')) {
           __out.push('\n            <div class="media-info-title">数据提供者</div>\n            <p class="media-info">\n              ');
           __out.push(__sanitize(this.model.get('contributors').join("、")));
           __out.push('\n            </p>\n          ');
         }
-      
+
         __out.push('\n\n          <a class="media-info" href="../desktop/#units/');
-      
+
         __out.push(__sanitize(this.model.id));
-      
+
         __out.push('/edit">数据有误？点击这里</a>\n        </div>\n      </div>\n      <!-- <div class="slide disqus">\n        ');
-      
+
         __out.push('\n      </div> -->\n    </div>\n    <div class="slide-handler">\n      <span class="icon icon-right-nav slide-next"></span>\n      <span class="icon icon-left-nav slide-prev"></span>\n    </div>\n  </div>\n</div>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6874,9 +6874,9 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push('<page class="content page"></page>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6922,13 +6922,13 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push('<header class="bar bar-nav">\n\n  <div class="input-icon input-search" style="display:none;">\n    <span class="icon icon-search"></span>\n    <input type="search" placeholder="Search">\n    <a class="icon icon-close pull-right search-close"></a>\n  </div>\n\n  <a class="icon icon-bars pull-left" sref="#toggle-sidebar"></a>\n  <a class="icon icon-search pull-right search-open"></a>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      筛选\n    </a>\n    <ul class="dropdown-menu">\n      <li class="dropdown-submenu pull-left">\n        <a class="">稀有度</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="rare">全部</a></li>\n          <li><a class="filter" data-key="rare" data-value="1">★</a></li>\n          <li><a class="filter" data-key="rare" data-value="2">★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="3">★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="4">★★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="[3,4]">★★★以上</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">元素</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="element">全部</a></li>\n          <li><a class="filter" data-key="element" data-value="1">火</a></li>\n          <li><a class="filter" data-key="element" data-value="2">水</a></li>\n          <li><a class="filter" data-key="element" data-value="3">风</a></li>\n          <li><a class="filter" data-key="element" data-value="4">光</a></li>\n          <li><a class="filter" data-key="element" data-value="5">暗</a></li>\n          <li><a class="filter" data-key="element" data-value="[1,2,3]">火/水/风</a></li>\n   </ul>\n      </li> <li class="dropdown-submenu pull-left">\n        <a class="">皮肤</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="skin">全部</a></li>\n          <li><a class="filter" data-key="skin" data-value="1">坚硬</a></li>\n          <li><a class="filter" data-key="skin" data-value="2">常规</a></li>\n          <li><a class="filter" data-key="skin" data-value="3">柔软</a></li>\n          <li><a class="filter" data-key="skin" data-value="4">极软</a></li>\n          <li><a class="filter" data-key="skin" data-value="5">极硬</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">技能</a>\n        <ul class="dropdown-menu" id="skill">\n          <li><a class="filter-reset" data-key="skill-sc">全部</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">新品上架</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="server">全部</a></li>\n          <li><a class="filter" data-key="server" data-value="1">日服</a></li>\n          <li><a class="filter" data-key="server" data-value="2">国服</a></li>\n        </ul>\n      </li>\n      <li class="divider"></li>\n      <li><a class="filter-reset">重置</a></li>\n    </ul>\n  </div>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      排序\n    </a>\n    <ul class="dropdown-menu">\n      <li class="active"><a class="sort-mode" data-key="rare">稀有度</a></li>\n      <li><a class="sort-mode" data-key="dps">单体DPS</a></li>\n      <li><a class="sort-mode" data-key="mdps">多体DPS</a></li>\n      <li><a class="sort-mode" data-key="life">生命力</a></li>\n      <li><a class="sort-mode" data-key="atk">攻击</a></li>\n      <li><a class="sort-mode" data-key="aarea">攻击距离</a></li>\n      <li><a class="sort-mode" data-key="anum">攻击数量</a></li>\n      <li><a class="sort-mode" data-key="aspd">攻击速度</a></li>\n      <li><a class="sort-mode" data-key="tenacity">韧性</a></li>\n      <li><a class="sort-mode" data-key="mspd">移动速度</a></li>\n      <li><a class="sort-mode" data-key="sklmax">极限值</a></li>\n    </ul>\n  </div>\n  <h1 class="title">');
-      
+
         __out.push(__sanitize(this.title));
-      
+
         __out.push('</h1>\n</header>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -6974,11 +6974,11 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push(_.renderTemplate("templates/mobile/pages/monsters/header"));
-      
+
         __out.push('\n<div class="content">\n  <ul class="table-view"></ul>\n</div>\n<a class="btn btn-lg scroll-to-top">\n  <span class="icon icon-up"></span>\n</a>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -7024,137 +7024,137 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         var key;
-      
+
         __out.push('<li class="table-view-cell media unit">\n  <a href="#monsters/');
-      
+
         __out.push(__sanitize(this.model.id));
-      
+
         __out.push('">\n    <img class="media-object pull-left" src="');
-      
+
         __out.push(__sanitize(this.model.thumbnailUrl()));
-      
+
         /*__out.push('">\n    <svg class="media-graphics element pull-right" width="80" height="80">\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(App.Utils.SVG.getBackgroundPolygonPointsString(80, 40)));
-      
+
         __out.push('" class="element-background"/>\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(App.Utils.SVG.getBackgroundPolygonPointsString(80, 26.7)));
-      
+
         __out.push('" class="element-background"/>\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(App.Utils.SVG.getBackgroundPolygonPointsString(80, 13.3)));
-      
+
         __out.push('" class="element-background"/>\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(this.model.getElementPolygonPointsString(80, 20)));*/
-      
+
         __out.push('" class="');
-      
+
         if (key = this.model.getElementKey()) {
           __out.push(__sanitize("element-" + key));
         }
-      
+
         __out.push('"/>\n    </svg>\n    <div class="media-body">\n      <h4 class="media-title">\n        ');
-      
+
         __out.push(__sanitize(this.model.getTitleString()));
-      
+
         __out.push('\n        <small>');
-      
+
         __out.push(__sanitize(this.model.getRareString()));
-      
+
         __out.push('</small>\n      </h4>\n      <div class="media-info-group"><p class="media-info"><span style="display: none;" id="life">');
-      
+
         __out.push(__sanitize(this.model.get("life")));
-      
+
         __out.push('</span><span style="display: none;" id="atk">');
-      
+
         __out.push(__sanitize(this.model.get("atk")));
-      
+
         __out.push('</span>          攻距：');
 
         __out.push(__sanitize(this.model.getString("aarea")));
-    
+
     __out.push('<br>\n          韧性：');
-      
+
         __out.push(__sanitize(this.model.getString("tenacity")));
-      
+
         __out.push('<br>\n          移速：');
-      
+
         __out.push(__sanitize(this.model.getString("mspd")));
-      
+
         __out.push('<br>\n          溅射距离：');
-      
+
         __out.push(__sanitize(this.model.getString("sarea")));
-      
+
         __out.push('<br>\n        </p>\n        <p class="media-info">');
-    
+
     __out.push('          攻数：');
-      
+
         __out.push(__sanitize(this.model.getString("anum")));
-      
+
     __out.push('<br>\n          多段：');
-    
+
         __out.push(__sanitize(this.model.getString("hits")));
-    
+
     __out.push('<br>\n          皮肤：');
-    
+
         __out.push(__sanitize(this.model.getSkinString()));
-    
+
     __out.push('<br>\n          攻速：');
-    
+
         __out.push(__sanitize(this.model.getString("aspd")));
-      
+
         __out.push('<br>\n        </p>\n        <p style="display: none;" class="media-info hidden-xs">\n          火：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("fire")));
-      
+
         __out.push('<br>\n          水：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("aqua")));
-      
+
         __out.push('<br>\n          风：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("wind")));
-      
+
         __out.push('<br>\n          光：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("light")));
-      
+
         __out.push('<br>\n        </p>\n        <p class="media-info hidden-sm">');
-    
+
         //__out.push('          皮肤：');
-      
+
         //__out.push(__sanitize(this.model.getSkinString()));
-    
+
     __out.push('          极限值：');
-      
+
         __out.push(__sanitize(this.model.getSklmaxString()));
-    
+
         __out.push('<br>\n          技能：');
-      
+
         __out.push(__sanitize(this.model.getString("skill-sc")));
-    
+
     __out.push('<br>\n          技能CD：');
-      
+
         __out.push(__sanitize(this.model.getString("sklcd")));
-    
+
     __out.push('<br>\n          技能SP：');
-      
+
         __out.push(__sanitize(this.model.getString("sklsp")));
-      
+
         __out.push('<span style="display: none;" id="dps">');
-      
+
         __out.push(__sanitize(this.model.get("dps")));
-      
+
         __out.push('</span><span style="display: none;" id="mdps">');
-      
+
         __out.push(__sanitize(this.model.get("mdps")));
-      
+
         __out.push('</span><br>\n        </p>\n\n      </div>\n    </div>\n  </a>\n</li>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -7200,13 +7200,13 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push('<header class="bar bar-nav">\n\n  <div class="input-icon input-search" style="display:none;">\n    <span class="icon icon-search"></span>\n    <input type="search" placeholder="Search">\n    <a class="icon icon-close pull-right search-close"></a>\n  </div>\n\n  <a class="icon icon-bars pull-left" sref="#toggle-sidebar"></a>\n  <a class="icon icon-search pull-right search-open"></a>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      筛选\n    </a>\n    <ul class="dropdown-menu">\n      <li class="dropdown-submenu pull-left">\n        <a class="">稀有度</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="rare">全部</a></li>\n          <li><a class="filter" data-key="rare" data-value="1">★</a></li>\n          <li><a class="filter" data-key="rare" data-value="2">★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="3">★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="4">★★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="5">★★★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="[3,4,5]">★★★以上</a></li>\n          <li><a class="filter" data-key="rare" data-value="[4,5]">★★★★以上</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">元素</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="element">全部</a></li>\n          <li><a class="filter" data-key="element" data-value="1">火</a></li>\n          <li><a class="filter" data-key="element" data-value="2">水</a></li>\n          <li><a class="filter" data-key="element" data-value="3">风</a></li>\n          <li><a class="filter" data-key="element" data-value="4">光</a></li>\n          <li><a class="filter" data-key="element" data-value="5">暗</a></li>\n          <li><a class="filter" data-key="element" data-value="[1,2,3]">火/水/风</a></li>\n          <li><a class="filter" data-key="element" data-value="[4,5]">光/暗</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">武器</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="weapon">全部</a></li>\n          <li><a class="filter" data-key="weapon" data-value="1">斩击</a></li>\n          <li><a class="filter" data-key="weapon" data-value="2">突击</a></li>\n          <li><a class="filter" data-key="weapon" data-value="3">打击</a></li>\n          <li><a class="filter" data-key="weapon" data-value="4">弓箭</a></li>\n          <li><a class="filter" data-key="weapon" data-value="5">魔法</a></li>\n          <li><a class="filter" data-key="weapon" data-value="6">铳弹</a></li>\n          <li><a class="filter" data-key="weapon" data-value="7">回复</a></li>\n          <li><a class="filter" data-key="weapon" data-value="[1,2,3]">斩/突/打</a></li>\n          <li><a class="filter" data-key="weapon" data-value="[4,5,6]">弓/魔/铳</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">成长</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="type">全部</a></li>\n          <li><a class="filter" data-key="type" data-value="1">早熟</a></li>\n          <li><a class="filter" data-key="type" data-value="2">平均</a></li>\n          <li><a class="filter" data-key="type" data-value="3">晚成</a></li>\n        </ul>\n      </li>\n    <li class="dropdown-submenu pull-left">\n        <a class="">年龄</a>\n        <ul class="dropdown-menu" id="age">\n          <li><a class="filter-reset" data-key="age">全部</a></li>\n          <li><a class="filter" data-key="age" data-value="0-10">10岁以下</a></li>\n          <li><a class="filter" data-key="age" data-value="11-15">11至15岁</a></li>\n          <li><a class="filter" data-key="age" data-value="16-20">16至20岁</a></li>\n          <li><a class="filter" data-key="age" data-value="21-25">21至25岁</a></li>\n          <li><a class="filter" data-key="age" data-value="26-30">26至30岁</a></li>\n          <li><a class="filter" data-key="age" data-value="31-35">31至35岁</a></li>\n          <li><a class="filter" data-key="age" data-value="36-40">36至40岁</a></li>\n          <li><a class="filter" data-key="age" data-value="41-1000">40岁以上</a></li>\n        </ul>\n      </li>\n    <li class="dropdown-submenu pull-left">\n        <a class="">攻击距离</a>\n        <ul class="dropdown-menu" id="aarea">\n          <li><a class="filter-reset" data-key="aarea">全部</a></li>\n          <li><a class="filter" data-key="aarea" data-value="0-50">近程</a></li>\n          <li><a class="filter" data-key="aarea" data-value="50-150">中程</a></li>\n          <li><a class="filter" data-key="aarea" data-value="150-500">远程</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">攻击数量</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="anum">全部</a></li>\n          <li><a class="filter" data-key="anum" data-value="1">1体</a></li>\n          <li><a class="filter" data-key="anum" data-value="2">2体</a></li>\n          <li><a class="filter" data-key="anum" data-value="3">3体</a></li>\n          <li><a class="filter" data-key="anum" data-value="4">4体</a></li>\n          <li><a class="filter" data-key="anum" data-value="5">5体</a></li>\n          <li><a class="filter" data-key="anum" data-value="[2,3]">2/3体</a></li>\n          <li><a class="filter" data-key="anum" data-value="[4,5]">4/5体</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">性别</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="gender">全部</a></li>\n          <li><a class="filter" data-key="gender" data-value="1">不明</a></li>\n          <li><a class="filter" data-key="gender" data-value="2">男</a></li>\n          <li><a class="filter" data-key="gender" data-value="3">女</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">新品上架</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="server">全部</a></li>\n          <li><a class="filter" data-key="server" data-value="1">日服</a></li>\n          <li><a class="filter" data-key="server" data-value="2">国服</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">交换所</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="exchange">全部</a></li>\n          <li><a class="filter" data-key="exchange" data-value="1">历代交换所人物</a></li>\n          <li><a class="filter" data-key="exchange" data-value="2">历代活动人物</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">国别</a>\n        <ul class="dropdown-menu" id="country">\n          <li><a class="filter-reset" data-key="country">全部</a></li>\n        </ul>\n      </li>\n      <li class="divider"></li>\n      <li><a class="filter-reset">重置</a></li>\n    </ul>\n  </div>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      排序\n    </a>\n    <ul class="dropdown-menu">\n      <li class="active"><a class="sort-mode" data-key="rare">稀有度</a></li>\n      <li><a class="sort-mode" data-key="dps">单体DPS</a></li>\n      <li><a class="sort-mode" data-key="mdps">多体DPS</a></li>\n      <li><a class="sort-mode" data-key="life">生命力</a></li>\n      <li><a class="sort-mode" data-key="atk">攻击</a></li>\n      <li><a class="sort-mode" data-key="aarea">攻击距离</a></li>\n      <li><a class="sort-mode" data-key="anum">攻击数量</a></li>\n      <li><a class="sort-mode" data-key="aspd">攻击速度</a></li>\n      <li><a class="sort-mode" data-key="tenacity">韧性</a></li>\n      <li><a class="sort-mode" data-key="mspd">移动速度</a></li>\n      <li><a class="sort-mode" data-key="hits">多段攻击</a></li>\n      <li><a class="sort-mode" data-key="sklmax">新品上架</a></li>\n    </ul>\n  </div>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      等级\n    </a>\n    <ul class="dropdown-menu">\n      <li class="active"><a class="level-mode" data-key="zero">零觉零级</a></li>\n      <li><a class="level-mode" data-key="mxlv">零觉满级</a></li>\n      <li><a class="level-mode" data-key="mxlvgr">满觉满级</a></li>\n    </ul>\n  </div>\n  <h1 class="title">');
-      
+
         __out.push(__sanitize(this.title));
-      
+
         __out.push('</h1>\n</header>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -7252,11 +7252,11 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push(_.renderTemplate("templates/mobile/pages/units/header"));
-      
+
         __out.push('\n<div class="content">\n  <ul class="table-view"></ul>\n</div>\n<a class="btn btn-lg scroll-to-top">\n  <span class="icon icon-up"></span>\n</a>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -7302,113 +7302,113 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         var key;
-      
+
         __out.push('<li class="table-view-cell media unit">\n  <a href="#units/');
-      
+
         __out.push(__sanitize(this.model.id));
-      
+
         __out.push('">\n    <img class="media-object pull-left" src="');
-      
+
         __out.push(__sanitize(this.model.thumbnailUrl()));
-      
+
         __out.push('">\n    <svg class="media-graphics element pull-right" width="80" height="80">\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(App.Utils.SVG.getBackgroundPolygonPointsString(80, 40)));
-      
+
         __out.push('" class="element-background"/>\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(App.Utils.SVG.getBackgroundPolygonPointsString(80, 26.7)));
-      
+
         __out.push('" class="element-background"/>\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(App.Utils.SVG.getBackgroundPolygonPointsString(80, 13.3)));
-      
+
         __out.push('" class="element-background"/>\n      <polygon xmlns="http://www.w3.org/2000/svg" points="');
-      
+
         __out.push(__sanitize(this.model.getElementPolygonPointsString(80, 20)));
-      
+
         __out.push('" class="');
-      
+
         if (key = this.model.getElementKey()) {
           __out.push(__sanitize("element-" + key));
         }
-      
+
         __out.push('"/>\n    </svg>\n    <div class="media-body">\n      <h4 class="media-title">\n        ');
-      
+
         __out.push(__sanitize(this.model.getTitleString()));
-      
+
         __out.push('\n        <small>');
-      
+
         __out.push(__sanitize(this.model.getRareString()));
-      
+
         __out.push('</small>\n      </h4>\n      <div class="media-info-group">\n        <p class="media-info">\n          生命：<span id="life">');
-      
+
         __out.push(__sanitize(this.model.get("life")));
-      
+
         __out.push('</span><br>\n          攻击：<span id="atk">');
-      
+
         __out.push(__sanitize(this.model.get("atk")));
-      
+
         __out.push('</span><br>\n          攻距：');
-      
+
         __out.push(__sanitize(this.model.getString("aarea")));
-      
+
         __out.push('<br>\n          攻数：');
-      
+
         __out.push(__sanitize(this.model.getString("anum")));
-      
+
         __out.push('<br>\n        </p>\n        <p class="media-info">\n          攻速：');
-      
+
         __out.push(__sanitize(this.model.getString("aspd")));
-      
+
         __out.push('<br>\n          韧性：');
-      
+
         __out.push(__sanitize(this.model.getString("tenacity")));
-      
+
         __out.push('<br>\n          移速：');
-      
+
         __out.push(__sanitize(this.model.getString("mspd")));
-      
+
         __out.push('<br>\n          多段：');
-      
+
         __out.push(__sanitize(this.model.getString("hits")));
-      
+
         __out.push('<br>\n        </p>\n        <p class="media-info hidden-xs">\n          成长：');
-      
+
         __out.push(__sanitize(this.model.getTypeString()));
-      
+
         __out.push('<br>\n          火：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("fire")));
-      
+
         __out.push('<br>\n          水：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("aqua")));
-      
+
         __out.push('<br>\n          风：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("wind")));
-      
+
         __out.push('<br>\n        </p>\n        <p class="media-info hidden-sm">\n          光：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("light")));
-      
+
         __out.push('<br>\n          暗：');
-      
+
         __out.push(__sanitize(this.model.getElementPercentString("dark")));
-      
+
         __out.push('<br>\n          DPS：<span id="dps">');
-      
+
         __out.push(__sanitize(this.model.get("dps")));
-      
+
         __out.push('</span><br>\n          总DPS：<span id="mdps">');
-      
+
         __out.push(__sanitize(this.model.get("mdps")));
-      
+
         __out.push('</span><br>\n        </p>\n\n      </div>\n    </div>\n  </a>\n</li>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -7454,9 +7454,9 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     (function() {
       (function() {
         __out.push('<sidebar class="content sidebar">\n  <ul class="table-view">\n    <li class="table-view-cell media">\n      <a class="navigate-right" href="#units">\n        <span class="media-object pull-left icon icon-person"></span>\n        <div class="media-body">\n          同伴\n        </div>\n      </a>\n    </li>\n    <li class="table-view-cell media">\n      <a class="navigate-right" href="#monsters">\n        <span class="media-object pull-left icon icon-gear"></span>\n        <div class="media-body">\n          魔宠\n        </div>\n      </a>\n    </li>\n  </ul>\n  <ul class="table-view">\n    <li class="table-view-cell media">\n      <a class="navigate-right" href="../gacha/">\n        <span class="media-object pull-left icon icon-pages"></span>\n        <div class="media-body">\n          模拟抽卡\n        </div>\n      </a>\n    </li>\n    <li class="table-view-cell media">\n      <a class="navigate-right" href="../desktop/">\n        <span class="media-object pull-left icon icon-home"></span>\n        <div class="media-body">\n          桌面版\n        </div>\n      </a>\n    </li>\n    <li class="table-view-cell media">\n      <a class="navigate-right" href="../download/">\n        <span class="media-object pull-left icon icon-download"></span>\n        <div class="media-body">\n          客户端下载\n        </div>\n      </a>\n    </li>\n    <li class="table-view-cell media">\n      <a class="navigate-right" href="../jump/about.html">\n        <span class="media-object pull-left icon icon-info"></span>\n        <div class="media-body">\n          帮助\n        </div>\n      </a>\n    </li>\n  </ul>\n</sidebar>\n');
-      
+
       }).call(this);
-      
+
     }).call(__obj);
     __obj.safe = __objSafe, __obj.escape = __escape;
     return __out.join('');
@@ -7536,7 +7536,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
     UnitsIndex.prototype.appendFilters = function() {
       var $age, $aarea, $country, appendCountryFilter;
-    
+
     $age = this.$("#age");
       $age.find(".filter").each(function() {
         var $target, max, min, original;
@@ -7557,7 +7557,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
           return true;
         });
       });
-    
+
       $aarea = this.$("#aarea");
       $aarea.find(".filter").each(function() {
         var $target, max, min, original;
