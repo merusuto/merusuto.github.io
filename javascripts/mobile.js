@@ -5864,7 +5864,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     skill: "技能",
     sklcd: "技能CD",
     sklsp: "技能消耗",
-  sklmax: "极限值",
+    sklmax: "技能极限",
     obtain: "获取方式",
     remark: "备注",
     hits: "多段攻击"
@@ -6545,7 +6545,10 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
         __out.push(__sanitize(this.model.get("id")));
 
-        __out.push('</small>\n          </h4>\n          <div class="media-info-group">\n            <p class="media-info">\n              攻距：');
+        __out.push('</small>\n          </h4>\n          <div class="media-info-group">\n            <p class="media-info">\n              最大生命：');
+
+        __out.push(__sanitize(this.model.getString("life")));
+        __out.push('<br>\n              攻距：');
 
         __out.push(__sanitize(this.model.getString("aarea")));
 
@@ -6561,12 +6564,15 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
         __out.push(__sanitize(this.model.getString("sarea")));
 
-        __out.push('<br>\n            </p>\n            <p class="media-info">\n              攻数：');
+        __out.push('<br>\n            </p>\n            <p class="media-info">\n              最大攻击：');
+
+        __out.push(__sanitize(this.model.getString("atk")));
+
+        __out.push('<br>\n              攻数：');
 
         __out.push(__sanitize(this.model.getString("anum")));
-
         __out.push('<br>\n              多段：');
-
+  
         __out.push(__sanitize(this.model.getString("hits")));
 
         __out.push('<br>\n              皮肤：');
@@ -6921,7 +6927,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
     }
     (function() {
       (function() {
-        __out.push('<header class="bar bar-nav">\n\n  <div class="input-icon input-search" style="display:none;">\n    <span class="icon icon-search"></span>\n    <input type="search" placeholder="Search">\n    <a class="icon icon-close pull-right search-close"></a>\n  </div>\n\n  <a class="icon icon-bars pull-left" sref="#toggle-sidebar"></a>\n  <a class="icon icon-search pull-right search-open"></a>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      筛选\n    </a>\n    <ul class="dropdown-menu">\n      <li class="dropdown-submenu pull-left">\n        <a class="">稀有度</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="rare">全部</a></li>\n          <li><a class="filter" data-key="rare" data-value="1">★</a></li>\n          <li><a class="filter" data-key="rare" data-value="2">★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="3">★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="4">★★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="[3,4]">★★★以上</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">元素</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="element">全部</a></li>\n          <li><a class="filter" data-key="element" data-value="1">火</a></li>\n          <li><a class="filter" data-key="element" data-value="2">水</a></li>\n          <li><a class="filter" data-key="element" data-value="3">风</a></li>\n          <li><a class="filter" data-key="element" data-value="4">光</a></li>\n          <li><a class="filter" data-key="element" data-value="5">暗</a></li>\n          <li><a class="filter" data-key="element" data-value="[1,2,3]">火/水/风</a></li>\n   </ul>\n      </li> <li class="dropdown-submenu pull-left">\n        <a class="">皮肤</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="skin">全部</a></li>\n          <li><a class="filter" data-key="skin" data-value="1">坚硬</a></li>\n          <li><a class="filter" data-key="skin" data-value="2">常规</a></li>\n          <li><a class="filter" data-key="skin" data-value="3">柔软</a></li>\n          <li><a class="filter" data-key="skin" data-value="4">极软</a></li>\n          <li><a class="filter" data-key="skin" data-value="5">极硬</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">技能</a>\n        <ul class="dropdown-menu" id="skill">\n          <li><a class="filter-reset" data-key="skill-sc">全部</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">新品上架</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="server">全部</a></li>\n          <li><a class="filter" data-key="server" data-value="1">日服</a></li>\n          <li><a class="filter" data-key="server" data-value="2">国服</a></li>\n        </ul>\n      </li>\n      <li class="divider"></li>\n      <li><a class="filter-reset">重置</a></li>\n    </ul>\n  </div>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      排序\n    </a>\n    <ul class="dropdown-menu">\n      <li class="active"><a class="sort-mode" data-key="rare">稀有度</a></li>\n      <li><a class="sort-mode" data-key="dps">单体DPS</a></li>\n      <li><a class="sort-mode" data-key="mdps">多体DPS</a></li>\n      <li><a class="sort-mode" data-key="life">生命力</a></li>\n      <li><a class="sort-mode" data-key="atk">攻击</a></li>\n      <li><a class="sort-mode" data-key="aarea">攻击距离</a></li>\n      <li><a class="sort-mode" data-key="anum">攻击数量</a></li>\n      <li><a class="sort-mode" data-key="aspd">攻击速度</a></li>\n      <li><a class="sort-mode" data-key="tenacity">韧性</a></li>\n      <li><a class="sort-mode" data-key="mspd">移动速度</a></li>\n      <li><a class="sort-mode" data-key="sklmax">极限值</a></li>\n    </ul>\n  </div>\n  <h1 class="title">');
+        __out.push('<header class="bar bar-nav">\n\n  <div class="input-icon input-search" style="display:none;">\n    <span class="icon icon-search"></span>\n    <input type="search" placeholder="Search">\n    <a class="icon icon-close pull-right search-close"></a>\n  </div>\n\n  <a class="icon icon-bars pull-left" sref="#toggle-sidebar"></a>\n  <a class="icon icon-search pull-right search-open"></a>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      筛选\n    </a>\n    <ul class="dropdown-menu">\n      <li class="dropdown-submenu pull-left">\n        <a class="">稀有度</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="rare">全部</a></li>\n          <li><a class="filter" data-key="rare" data-value="1">★</a></li>\n          <li><a class="filter" data-key="rare" data-value="2">★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="3">★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="4">★★★★</a></li>\n          <li><a class="filter" data-key="rare" data-value="[3,4]">★★★以上</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">元素</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="element">全部</a></li>\n          <li><a class="filter" data-key="element" data-value="1">火</a></li>\n          <li><a class="filter" data-key="element" data-value="2">水</a></li>\n          <li><a class="filter" data-key="element" data-value="3">风</a></li>\n          <li><a class="filter" data-key="element" data-value="4">光</a></li>\n          <li><a class="filter" data-key="element" data-value="5">暗</a></li>\n          <li><a class="filter" data-key="element" data-value="[1,2,3]">火/水/风</a></li>\n   </ul>\n      </li> <li class="dropdown-submenu pull-left">\n        <a class="">皮肤</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="skin">全部</a></li>\n          <li><a class="filter" data-key="skin" data-value="1">坚硬</a></li>\n          <li><a class="filter" data-key="skin" data-value="2">常规</a></li>\n          <li><a class="filter" data-key="skin" data-value="3">柔软</a></li>\n          <li><a class="filter" data-key="skin" data-value="4">极软</a></li>\n          <li><a class="filter" data-key="skin" data-value="5">极硬</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">技能</a>\n        <ul class="dropdown-menu" id="skill">\n          <li><a class="filter-reset" data-key="skill-sc">全部</a></li>\n        </ul>\n      </li>\n      <li class="dropdown-submenu pull-left">\n        <a class="">新品上架</a>\n        <ul class="dropdown-menu">\n          <li><a class="filter-reset" data-key="server">全部</a></li>\n          <li><a class="filter" data-key="server" data-value="1">日服</a></li>\n          <li><a class="filter" data-key="server" data-value="2">国服</a></li>\n        </ul>\n      </li>\n      <li class="divider"></li>\n      <li><a class="filter-reset">重置</a></li>\n    </ul>\n  </div>\n  <div class="dropdown pull-right">\n    <a class="btn btn-link dropdown-toggle">\n      排序\n    </a>\n    <ul class="dropdown-menu">\n      <li class="active"><a class="sort-mode" data-key="rare">稀有度</a></li>\n      <li><a class="sort-mode" data-key="tenacity">韧性</a></li>\n      <li><a class="sort-mode" data-key="life">最大生命</a></li>\n      <li><a class="sort-mode" data-key="atk">最大攻击</a></li>\n      <li><a class="sort-mode" data-key="aarea">攻击距离</a></li>\n      <li><a class="sort-mode" data-key="anum">攻击数量</a></li>\n      <li><a class="sort-mode" data-key="aspd">攻击速度</a></li>\n      <li><a class="sort-mode" data-key="mspd">移动速度</a></li>\n      <li><a class="sort-mode" data-key="sarea">溅射距离</a></li>\n      <li><a class="sort-mode" data-key="sklmax">技能极限<a></li>\n    </ul>\n  </div>\n  <h1 class="title">');
 
         __out.push(__sanitize(this.title));
 
@@ -7075,7 +7081,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
         __out.push(__sanitize(this.model.getString("aarea")));
 
-    __out.push('<br>\n          韧性：');
+        __out.push('<br>\n          韧性：');
 
         __out.push(__sanitize(this.model.getString("tenacity")));
 
@@ -7089,19 +7095,19 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
         __out.push('<br>\n        </p>\n        <p class="media-info">');
 
-    __out.push('          攻数：');
+        __out.push('          攻数：');
 
         __out.push(__sanitize(this.model.getString("anum")));
 
-    __out.push('<br>\n          多段：');
+        __out.push('<br>\n          多段：');
 
         __out.push(__sanitize(this.model.getString("hits")));
 
-    __out.push('<br>\n          皮肤：');
+        __out.push('<br>\n          皮肤：');
 
         __out.push(__sanitize(this.model.getSkinString()));
 
-    __out.push('<br>\n          攻速：');
+        __out.push('<br>\n          攻速：');
 
         __out.push(__sanitize(this.model.getString("aspd")));
 
@@ -7123,11 +7129,7 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
         __out.push('<br>\n        </p>\n        <p class="media-info hidden-sm">');
 
-        //__out.push('          皮肤：');
-
-        //__out.push(__sanitize(this.model.getSkinString()));
-
-    __out.push('          极限值：');
+        __out.push('          技能极限：');
 
         __out.push(__sanitize(this.model.getSklmaxString()));
 
@@ -7135,11 +7137,11 @@ Backbone.Collection.prototype.where = function(attrs, first) {
 
         __out.push(__sanitize(this.model.getString("skill-sc")));
 
-    __out.push('<br>\n          技能CD：');
+        __out.push('<br>\n          技能CD：');
 
         __out.push(__sanitize(this.model.getString("sklcd")));
 
-    __out.push('<br>\n          技能SP：');
+        __out.push('<br>\n          技能SP：');
 
         __out.push(__sanitize(this.model.getString("sklsp")));
 
